@@ -26,3 +26,19 @@ button:disabled {
     font-weight: bold;
   }
 }
+
+#filter-bar {
+  margin: $s-size 0;
+  padding: $s-size;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: space-around;
+}
+
+#expense-form {
+  th {
+    font-weight: bold;
+    text-align: right;
+    padding-right: $lg-size;
+  }
+}

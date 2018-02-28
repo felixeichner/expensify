@@ -1,8 +1,9 @@
 import React from 'react';
 
-export default () => (
+const HelpPage = () => (
   <div>
     This is the HelpPage content
   </div>
 );
 
+export default HelpPage;
