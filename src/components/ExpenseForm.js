@@ -5,14 +5,18 @@ import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 export default class ExpenseForm extends React.Component {
-  state = {
-    description: '',
-    note: '',
-    amount: '',
-    createdAt: moment(),
-    calendarFocused: false,
-    error: ''
-  };
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      amount: props.expense ? (props.expense.amount / 100).toFixed(2) : '',
+      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+      calendarFocused: false,
+      error: ''
+    };
+  }
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }));
@@ -69,7 +73,7 @@ export default class ExpenseForm extends React.Component {
                 </td>
               </tr>
               <tr>
-                <th>Amount</th>
+                <th>Amount (€)</th>
                 <td>
                   <input
                     type="text"
@@ -106,15 +110,11 @@ export default class ExpenseForm extends React.Component {
               </tr>
             </tbody>
           </table>
-          <p style={{marginLeft:'30px'}}><button type="submit">Add Expense</button></p>
+          <p style={{marginLeft:'30px'}}>
+            <button type="submit">{this.props.expense ? 'Update Expense' : 'Add Expense'}</button>
+          </p>
         </form>
       </div>
     )
   }
-};
-
-const mapStateToProps = (state) => {
-  return {
-    expenses: state.expenses
-  };
 };
