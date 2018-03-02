@@ -42,3 +42,8 @@ button:disabled {
     padding-right: $lg-size;
   }
 }
+
+.error-message {
+  color: red;
+  font-style: italic;
+}
