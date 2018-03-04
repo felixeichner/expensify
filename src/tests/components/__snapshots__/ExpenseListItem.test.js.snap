@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItems correctly 1`] = `
+<tr>
+  <td>
+    <Link
+      replace={false}
+      to="/edit/1"
+    >
+      <strong>
+        Water bill
+      </strong>
+    </Link>
+  </td>
+  <td>
+    nothing to say
+  </td>
+  <td>
+    € 
+    230.00
+  </td>
+  <td>
+    01. Jan 1970
+  </td>
+</tr>
+`;
