@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 export default class ExpenseForm extends React.Component {
   constructor (props) {
@@ -97,15 +96,15 @@ export default class ExpenseForm extends React.Component {
               <tr>
                 <th>Date</th>
                 <td>
-                <SingleDatePicker
-                  date={this.state.createdAt}
-                  onDateChange={this.onDateChange}
-                  focused={this.state.calendarFocused}
-                  onFocusChange={this.onFocusChange}
-                  numberOfMonths={1}
-                  isOutsideRange={() => false}
-                  displayFormat={"DD. MMM YYYY"}
-                />
+                  <SingleDatePicker
+                    date={this.state.createdAt}
+                    onDateChange={this.onDateChange}
+                    focused={this.state.calendarFocused}
+                    onFocusChange={this.onFocusChange}
+                    numberOfMonths={1}
+                    isOutsideRange={() => false}
+                    displayFormat={"DD. MMM YYYY"}
+                  />
                 </td>
               </tr>
             </tbody>
