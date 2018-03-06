@@ -42,7 +42,7 @@ export class ExpenseListFilters extends React.Component {
           >
             <option value="date">Date</option>
             <option value="amount">Amount</option>
-          </select>export
+          </select>
         </span>
         <span>
           <strong>Filter by date: </strong>
