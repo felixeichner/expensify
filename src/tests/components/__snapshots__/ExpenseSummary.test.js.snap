@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpensesSummary with multiple expenses 1`] = `
+<div
+  id="summary-bar"
+>
+  <span>
+    <strong>
+      No of expenses: 
+      23
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Total amount: 
+      € 6 254,37
+    </strong>
+  </span>
+</div>
+`;
+
+exports[`should render ExpensesSummary with no expenses 1`] = `
+<div
+  id="summary-bar"
+>
+  <span>
+    <strong>
+      No of expenses: 
+      0
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Total amount: 
+      € 0,00
+    </strong>
+  </span>
+</div>
+`;
+
+exports[`should render ExpensesSummary with one expense 1`] = `
+<div
+  id="summary-bar"
+>
+  <span>
+    <strong>
+      No of expenses: 
+      1
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Total amount: 
+      € 123,54
+    </strong>
+  </span>
+</div>
+`;
