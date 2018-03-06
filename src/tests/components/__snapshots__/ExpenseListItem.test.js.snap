@@ -16,8 +16,7 @@ exports[`should render ExpenseListItems correctly 1`] = `
     nothing to say
   </td>
   <td>
-    € 
-    230.00
+    € 230,00
   </td>
   <td>
     01. Jan 1970

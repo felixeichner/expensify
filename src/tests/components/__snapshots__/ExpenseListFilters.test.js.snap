@@ -33,7 +33,6 @@ exports[`should render ExpenseListFilters correctly 1`] = `
         Amount
       </option>
     </select>
-    export
   </span>
   <span>
     <strong>
@@ -168,7 +167,6 @@ exports[`should render ExpenseListFilters with data correctly 1`] = `
         Amount
       </option>
     </select>
-    export
   </span>
   <span>
     <strong>
