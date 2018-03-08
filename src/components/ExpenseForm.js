@@ -4,6 +4,8 @@ import numeral from 'numeral';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
 
+numeral.locale('de');
+
 export default class ExpenseForm extends React.Component {
   constructor (props) {
     super(props);
@@ -47,7 +49,7 @@ export default class ExpenseForm extends React.Component {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
         description: this.state.description,
-        amount: parseFloat(this.state.amount, 10) * 100,
+        amount: parseFloat(numeral(this.state.amount).value(), 10) * 100,
         note: this.state.note,
         createdAt: this.state.createdAt.valueOf()
       });
