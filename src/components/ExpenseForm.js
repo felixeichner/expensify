@@ -4,8 +4,6 @@ import numeral from 'numeral';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
 
-numeral.locale('de');
-
 export default class ExpenseForm extends React.Component {
   constructor (props) {
     super(props);
