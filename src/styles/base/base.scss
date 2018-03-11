@@ -3,62 +3,12 @@ html {
 }
 
 body {
-  margin: $s-size;
+  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
+  font-size: $font-size-m;
+  line-height: 1.6;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: default;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(172, 172, 172);
-  padding: 2rem;
-  margin-bottom: 1rem;
-  .is-active {
-    font-weight: bold;
-  }
-}
-
-#filter-bar, #summary-bar {
-  margin: $s-size 0;
-  padding: $s-size;
-  background-color: rgb(230, 230, 230);
-  span {
-    margin: $s-size;
-  }
-}
-
-#expense-form {
-  th {
-    font-weight: bold;
-    text-align: right;
-    padding-right: $lg-size;
-  }
-}
-
-.login_component {
-  text-align: center;
-}
-
-.button-alert {
-  background-color: red;
-  border-color: red;
-  margin: 0 0 20px 20px;
-}
-
-.error-message {
-  color: red;
-  font-style: italic;
 }

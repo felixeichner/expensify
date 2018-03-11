@@ -14,18 +14,18 @@ export class EditExpensePage extends React.Component {
   };
   render() {
     return (
-      <div>
-        <h4>Edit Expense</h4>
-        <button
-          onClick={this.onRemove}
-          className='button-alert'
-        >
-          Remove
-        </button>
+      <div className="content-container">
+        <div className="page-header bold">Edit Expense</div>
         <ExpenseForm
           expense={this.props.expense}
           onSubmit={this.onSubmit}
         />
+        <button
+          onClick={this.onRemove}
+          className='button remove-button'
+        >
+          Remove Expense
+        </button>
       </div>
     );
   }

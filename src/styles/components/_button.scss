@@ -1,0 +1,23 @@
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.button {
+  color: white;
+  background-color: $blue;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  padding: $s-size;
+  font-size: $font-size-lg;
+  font-weight: 300;
+}
+
+.remove-button {
+  background-color: rgb(143, 57, 57);
+  padding: .5rem $s-size;
+}

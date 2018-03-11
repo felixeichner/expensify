@@ -55,66 +55,44 @@ export default class ExpenseForm extends React.Component {
   };
   render() {
     return (
-      <div>
-        {this.state.error && <p className="error-message">{this.state.error}</p>}
-        <form id="expense-form" onSubmit={this.onSubmit}>
-          <table>
-            <tbody>
-              <tr>
-                <th>Description</th>
-                <td>
-                  <input 
-                    type="text"
-                    value={this.state.description}
-                    placeholder="Description"
-                    autoFocus
-                    onChange={this.onDescriptionChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th>Amount (€)</th>
-                <td>
-                  <input
-                    type="text"
-                    value={this.state.amount}
-                    placeholder="Amount"
-                    onChange={this.onAmountChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th>Note</th>
-                <td>
-                  <textarea
-                    value={this.state.note}
-                    placeholder="Add a note for your expense (optional)"
-                    onChange={this.onNoteChange}
-                  >
-                  </textarea>
-                </td>
-              </tr>
-              <tr>
-                <th>Date</th>
-                <td>
-                  <SingleDatePicker
-                    date={this.state.createdAt}
-                    onDateChange={this.onDateChange}
-                    focused={this.state.calendarFocused}
-                    onFocusChange={this.onFocusChange}
-                    numberOfMonths={1}
-                    isOutsideRange={() => false}
-                    displayFormat={"DD. MMM YYYY"}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p style={{marginLeft:'30px'}}>
-            <button type="submit">{this.props.expense ? 'Update Expense' : 'Add Expense'}</button>
-          </p>
-        </form>
-      </div>
+      <form className="form" onSubmit={this.onSubmit}>
+        {this.state.error && <p className="form__error">{this.state.error}</p>}
+        <input 
+          type="text"
+          value={this.state.description}
+          placeholder="Description"
+          autoFocus
+          onChange={this.onDescriptionChange}
+        />
+        <input
+          type="text"
+          value={this.state.amount}
+          placeholder="Amount"
+          onChange={this.onAmountChange}
+        />
+        <textarea
+          value={this.state.note}
+          placeholder="Add a note for your expense (optional)"
+          onChange={this.onNoteChange}
+        >
+        </textarea>
+        <div className="single-date-picker">
+          <SingleDatePicker
+            date={this.state.createdAt}
+            onDateChange={this.onDateChange}
+            focused={this.state.calendarFocused}
+            onFocusChange={this.onFocusChange}
+            numberOfMonths={1}
+            isOutsideRange={() => false}
+            displayFormat={"DD. MMM YYYY"}
+          />
+        </div>
+        <div className="submit-button">
+          <button type="submit" className="button">
+            {this.props.expense ? 'Update Expense' : 'Add Expense'}
+          </button>
+        </div>
+      </form>
     )
   }
 };

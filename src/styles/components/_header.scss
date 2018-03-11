@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $dark-blue;
+  color: white;
+  a {
+    margin: auto 0;
+    color: white;
+    text-decoration: none;
+    font-size: $xl-size;
+    font-weight: bold;
+  }
+  .button {
+    background: none;
+    font-size: $font-size-lg;
+  }
+}

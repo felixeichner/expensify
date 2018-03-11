@@ -1,0 +1,59 @@
+.content-container {
+  padding: $s-size 10rem;
+}
+
+.expenses-list {
+  margin-top: $xl-size;
+}
+
+.expenses-list__header, .expenses-list__content {
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size;
+}
+
+.expenses-list__header {
+  background: $light-grey;
+  border-radius: 3px 3px 0 0;
+  @media (max-width: $phone-breakpoint) {
+    span:last-child {
+      display: none;
+    }
+  }
+}
+
+.expenses-list__content {
+  color: $dark-grey;
+  border: 1px solid $light-grey;
+  align-items: center;
+  text-decoration: none;
+  word-break: break-word;
+  margin-bottom: $m-size;
+  @media (max-width: $phone-breakpoint) {
+    flex-direction: column;
+    align-items: left;
+    .list-item.amount {
+      margin-left: 0;
+    }
+  }
+  .list-item {
+    margin: 0;
+    line-height: 1.4;
+  }
+  .description {
+    color: black;
+    font-size: $font-size-lg;
+    font-weight: bold;
+  }
+  .created-at {
+    font-size: $s-size;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  .amount {
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: $s-size;
+  }
+
+}

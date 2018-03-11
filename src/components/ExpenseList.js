@@ -5,25 +5,18 @@ import ExpenseListItem from './ExpenseListItem';
 
 export const ExpenseList = (props) => {
   return (
-    <div>
-      <h3>Expense List</h3>
+    <div className="expenses-list">
+      <div className="expenses-list__header">
+        <span>Expenses</span>
+        <span>Amount</span>
+      </div>
       {
         props.expenses.length === 0 ? (
-          <h4>No expenses to list!</h4>
+          <div className="expenses-list__content bold">No expenses to list!</div>
         ) : (
-          <table style={{width: '100%'}}>
-            <tbody>
-              <tr style={{textAlign: 'left'}}>
-                <th>Description</th>
-                <th>Note</th>
-                <th>Amount</th>
-                <th>created at</th>
-              </tr>
-              {props.expenses.map((expense) => (
-                <ExpenseListItem key={expense.id} {...expense} />
-              ))}
-            </tbody>
-          </table>  
+          props.expenses.map((expense) => (
+            <ExpenseListItem key={expense.id} {...expense} />
+          ))
         )
       }
     </div>

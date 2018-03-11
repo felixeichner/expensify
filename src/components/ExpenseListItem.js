@@ -8,12 +8,16 @@ numeral.locale('de');
 
 const ExpenseListItem = ({ id, description, note, amount, createdAt }) => {
   return (
-    <tr>
-      <td><Link to={`/edit/${id}`}><strong>{description}</strong></Link></td>
-      <td>{note}</td>
-      <td>{numeral(amount / 100).format('$ 0,0.00')}</td>
-      <td>{moment(createdAt).format("DD. MMM YYYY")}</td>
-    </tr>
+    <Link to={`/edit/${id}`} className="expenses-list__content">
+      <span>
+        <p className="list-item description">{description}</p>
+        <p className="list-item note">{note}</p>
+        <p className="list-item created-at">{moment(createdAt).format("DD. MMM YYYY")}</p>
+      </span>
+      <span>
+        <p className="list-item amount">{numeral(amount / 100).format('$ 0,0.00')}</p>
+      </span>
+    </Link>
   )
 };
 

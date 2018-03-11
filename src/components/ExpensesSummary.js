@@ -9,13 +9,10 @@ numeral.locale('de');
 
 export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
   return (
-    <div id={'summary-bar'}>
-      <span>
-        <strong>No of expenses: {expenseCount}</strong>
-      </span>
-      <span>
-        <strong>Total amount: {numeral(expensesTotal / 100).format('$ 0,0.00')}</strong>
-      </span>
+    <div className="page-header">
+      Viewing <span className="bold">{expenseCount}</span>
+      {expenseCount === 1 ? ' expense ' : ' expenses '}
+      totalling <span className="bold">{numeral(expensesTotal / 100).format('$ 0,0.00')}</span>
     </div>
   )
 };

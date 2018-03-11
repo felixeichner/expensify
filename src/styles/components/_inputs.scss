@@ -1,0 +1,40 @@
+.inputs {
+  margin: $xxl-size 0 $lg-size 0;
+  display: flex;
+  flex-direction: row;
+  
+  input, select {
+    padding-left: $s-size;
+    margin-right: $s-size;
+    background: white;
+  }
+
+  @media(max-width: $desktop-breakpoint) {
+    flex-direction: column;
+    margin: $m-size 0;
+    input, select {
+      margin: 0 0 $s-size 0;
+      padding: $s-size;
+    }
+
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin: 0 0 $s-size 0;
+    padding: $s-size;
+  }
+}
+
+.single-date-picker, .submit-button {
+  padding-left: 0;
+}
+
+.form__error {
+  margin: 0 $s-size;
+  font-style: italic;
+  color: red;
+}

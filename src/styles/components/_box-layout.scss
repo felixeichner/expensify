@@ -1,0 +1,21 @@
+.box-layout {
+  background: url('/images/background_coins.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box-layout__box {
+  background: fade-out(white, .17);
+  padding: $xl-size;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.box-layout__title {
+  line-height: 1;
+  margin: 0 0 $m-size 0;
+}
