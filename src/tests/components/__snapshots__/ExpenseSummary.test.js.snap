@@ -2,57 +2,60 @@
 
 exports[`should render ExpensesSummary with multiple expenses 1`] = `
 <div
-  id="summary-bar"
+  className="page-header"
 >
-  <span>
-    <strong>
-      No of expenses: 
-      23
-    </strong>
+  Viewing 
+  <span
+    className="bold"
+  >
+    23
   </span>
-  <span>
-    <strong>
-      Total amount: 
-      € 6 254,37
-    </strong>
+   expenses 
+  totalling 
+  <span
+    className="bold"
+  >
+    € 6 254,37
   </span>
 </div>
 `;
 
 exports[`should render ExpensesSummary with no expenses 1`] = `
 <div
-  id="summary-bar"
+  className="page-header"
 >
-  <span>
-    <strong>
-      No of expenses: 
-      0
-    </strong>
+  Viewing 
+  <span
+    className="bold"
+  >
+    0
   </span>
-  <span>
-    <strong>
-      Total amount: 
-      € 0,00
-    </strong>
+   expenses 
+  totalling 
+  <span
+    className="bold"
+  >
+    € 0,00
   </span>
 </div>
 `;
 
 exports[`should render ExpensesSummary with one expense 1`] = `
 <div
-  id="summary-bar"
+  className="page-header"
 >
-  <span>
-    <strong>
-      No of expenses: 
-      1
-    </strong>
+  Viewing 
+  <span
+    className="bold"
+  >
+    1
   </span>
-  <span>
-    <strong>
-      Total amount: 
-      € 123,54
-    </strong>
+   expense 
+  totalling 
+  <span
+    className="bold"
+  >
+    € 123,54
   </span>
 </div>
 `;

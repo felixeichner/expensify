@@ -2,12 +2,24 @@
 
 exports[`should render LoginPage correctly 1`] = `
 <div
-  className="login_component"
+  className="box-layout"
 >
-  <button
-    id="login_button"
+  <div
+    className="box-layout__box"
   >
-    Login
-  </button>
+    <h1
+      className="box-layout__title"
+    >
+      Expensify
+    </h1>
+    <p>
+      Get your expenses organized!
+    </p>
+    <button
+      className="button"
+    >
+      Login with Google
+    </button>
+  </div>
 </div>
 `;

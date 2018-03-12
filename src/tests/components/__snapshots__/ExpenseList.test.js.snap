@@ -1,82 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with expenses 1`] = `
-<div>
-  <h3>
-    Expense List
-  </h3>
-  <table
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
+<div
+  className="expenses-list"
+>
+  <div
+    className="expenses-list__header"
   >
-    <tbody>
-      <tr
-        style={
-          Object {
-            "textAlign": "left",
-          }
-        }
-      >
-        <th>
-          Description
-        </th>
-        <th>
-          Note
-        </th>
-        <th>
-          Amount
-        </th>
-        <th>
-          created at
-        </th>
-      </tr>
-      <ExpenseListItem
-        amount={23000}
-        createdAt={0}
-        description="Water bill"
-        id="1"
-        key="1"
-        note="nothing to say"
-      />
-      <ExpenseListItem
-        amount={5000}
-        createdAt={345600000}
-        description="Shopping"
-        id="2"
-        key="2"
-        note="shoes and stuff"
-      />
-      <ExpenseListItem
-        amount={27200}
-        createdAt={-86400000}
-        description="Rent"
-        id="3"
-        key="3"
-        note="March rent"
-      />
-      <ExpenseListItem
-        amount={7200}
-        createdAt={-259200000}
-        description="Gas bill"
-        id="4"
-        key="4"
-        note=""
-      />
-    </tbody>
-  </table>
+    <span>
+      Expenses
+    </span>
+    <span>
+      Amount
+    </span>
+  </div>
+  <ExpenseListItem
+    amount={23000}
+    createdAt={0}
+    description="Water bill"
+    id="1"
+    key="1"
+    note="nothing to say"
+  />
+  <ExpenseListItem
+    amount={5000}
+    createdAt={345600000}
+    description="Shopping"
+    id="2"
+    key="2"
+    note="shoes and stuff"
+  />
+  <ExpenseListItem
+    amount={27200}
+    createdAt={-86400000}
+    description="Rent"
+    id="3"
+    key="3"
+    note="March rent"
+  />
+  <ExpenseListItem
+    amount={7200}
+    createdAt={-259200000}
+    description="Gas bill"
+    id="4"
+    key="4"
+    note=""
+  />
 </div>
 `;
 
 exports[`should render ExpenseList without any expenses 1`] = `
-<div>
-  <h3>
-    Expense List
-  </h3>
-  <h4>
+<div
+  className="expenses-list"
+>
+  <div
+    className="expenses-list__header"
+  >
+    <span>
+      Expenses
+    </span>
+    <span>
+      Amount
+    </span>
+  </div>
+  <div
+    className="expenses-list__content bold"
+  >
     No expenses to list!
-  </h4>
+  </div>
 </div>
 `;

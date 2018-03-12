@@ -1,25 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseListItems correctly 1`] = `
-<tr>
-  <td>
-    <Link
-      replace={false}
-      to="/edit/1"
+<Link
+  className="expenses-list__content"
+  replace={false}
+  to="/edit/1"
+>
+  <span>
+    <p
+      className="list-item description"
     >
-      <strong>
-        Water bill
-      </strong>
-    </Link>
-  </td>
-  <td>
-    nothing to say
-  </td>
-  <td>
-    € 230,00
-  </td>
-  <td>
-    01. Jan 1970
-  </td>
-</tr>
+      Water bill
+    </p>
+    <p
+      className="list-item note"
+    >
+      nothing to say
+    </p>
+    <p
+      className="list-item created-at"
+    >
+      01. Jan 1970
+    </p>
+  </span>
+  <span>
+    <p
+      className="list-item amount"
+    >
+      € 230,00
+    </p>
+  </span>
+</Link>
 `;

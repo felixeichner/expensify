@@ -1,9 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseDashboardPage correctly 1`] = `
-<div>
-  <Connect(ExpenseListFilters) />
+<div
+  className="content-container"
+>
   <Connect(ExpensesSummary) />
+  <Link
+    replace={false}
+    to="/create"
+  >
+    <button
+      className="button"
+    >
+      Add Expense
+    </button>
+  </Link>
+  <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
 </div>
 `;
